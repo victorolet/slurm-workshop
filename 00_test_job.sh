@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=my_first_job
-#SBATCH --account=pawsey0012
+#SBATCH --account=<your_project_account>
 #SBATCH --output=output_%j.txt
 #SBATCH --error=error_%j.txt
 #SBATCH --ntasks=1

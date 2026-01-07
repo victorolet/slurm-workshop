@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=param_sweep
-#SBATCH --account=pawsey0012
+#SBATCH --account=<your_project_account>
 #SBATCH --partition=work
 #SBATCH --output=results/param_%A_%a.out
 #SBATCH --error=results/param_%A_%a.err

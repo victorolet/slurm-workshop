@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=stage3_combine
-#SBATCH --account=pawseyxxxx
+#SBATCH --account=<your_project_account>
 #SBATCH --partition=work
 #SBATCH --output=pipeline/stage3_%j.out
 #SBATCH --error=pipeline/stage3_%j.err

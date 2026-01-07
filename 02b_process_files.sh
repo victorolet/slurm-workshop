@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=process_files
-#SBATCH --account=pawsey0012
+#SBATCH --account=<your_project_account>
 #SBATCH --partition=work
 #SBATCH --output=results/file_%A_%a.out
 #SBATCH --error=results/file_%A_%a.err

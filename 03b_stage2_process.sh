@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=stage2_process
-#SBATCH --account=pawseyxxxx
+#SBATCH --account=<your_project_account>
 #SBATCH --partition=work
 #SBATCH --output=pipeline/stage2_%A_%a.out
 #SBATCH --error=pipeline/stage2_%A_%a.err
