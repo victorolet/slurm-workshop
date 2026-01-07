@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=stage1_generate
-#SBATCH --account=<your_project_account>
+#SBATCH --job-name=stage03a_generate
+#SBATCH --account=courses01
 #SBATCH --partition=work
-#SBATCH --output=pipeline/stage1_%j.out
-#SBATCH --error=pipeline/stage1_%j.err
+#SBATCH --output=stage03_pipeline/stage1_%j.out
+#SBATCH --error=stage03_pipeline/stage1_%j.err
 #SBATCH --time=00:05:00
 #SBATCH --ntasks=1
 #SBATCH --mem=1G
@@ -12,7 +12,7 @@
 module load python/3.11.6
 
 # Create directories
-mkdir -p pipeline/data
+mkdir -p stage03_pipeline/data
 
 echo "================================"
 echo "STAGE 1: Generate Data"
@@ -22,13 +22,13 @@ echo "================================"
 
 # Generate 3 data files for processing
 for i in {1..3}; do
-    echo "Generating pipeline/data/input_${i}.txt"
+    echo "Generating stage03_pipeline/data/input_${i}.txt"
     
     # Create sample data file
     python3 << EOF
 import random
 
-with open('pipeline/data/input_${i}.txt', 'w') as f:
+with open('stage03_pipeline/data/input_${i}.txt', 'w') as f:
     f.write(f"# Dataset ${i}\\n")
     # Generate 50 random numbers
     for _ in range(50):
@@ -40,5 +40,5 @@ done
 
 echo "Data generation complete!"
 echo "Created files:"
-ls -lh pipeline/data/
+ls -lh stage03_pipeline/data/
 echo "Finished at: $(date)"

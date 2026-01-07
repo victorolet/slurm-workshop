@@ -1,0 +1,10 @@
+================================
+Running parameter sweep
+Task ID: 4
+Parameter value: 2.0
+Started at: Wed Jan  7 11:55:42 AM AWST 2026
+================================
+Processing with parameter = 2.0
+Result: 0.4065105827153258
+Parameter 2.0 completed successfully
+Finished at: Wed Jan  7 11:55:42 AM AWST 2026

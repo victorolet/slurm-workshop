@@ -1,0 +1,5 @@
+Statistics for 358.0 values
+Sum: 50199.0
+Average: 501.99
+Min: 31.0
+Max: 998.0

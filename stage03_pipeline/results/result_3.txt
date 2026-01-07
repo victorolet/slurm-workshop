@@ -1,0 +1,7 @@
+Analysis Results for Dataset 3
+========================================
+Sample size: 50
+Mean: 51.6332
+Std Dev: 29.1466
+Min: 1.3600
+Max: 98.6400

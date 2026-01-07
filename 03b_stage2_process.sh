@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=stage2_process
-#SBATCH --account=<your_project_account>
+#SBATCH --job-name=stage03b_process
+#SBATCH --account=courses01
 #SBATCH --partition=work
-#SBATCH --output=pipeline/stage2_%A_%a.out
-#SBATCH --error=pipeline/stage2_%A_%a.err
+#SBATCH --output=stage03_pipeline/stage2_%A_%a.out
+#SBATCH --error=stage03_pipeline/stage2_%A_%a.err
 #SBATCH --array=1-3
 #SBATCH --time=00:05:00
 #SBATCH --ntasks=1
@@ -15,11 +15,11 @@ module load python/3.11.6
 # This job should only run AFTER stage 1 completes successfully
 # Submit with: sbatch --dependency=afterok:JOBID_STAGE1 03b_stage2_process.sh
 
-INPUT_FILE="pipeline/data/input_${SLURM_ARRAY_TASK_ID}.txt"
-OUTPUT_FILE="pipeline/results/result_${SLURM_ARRAY_TASK_ID}.txt"
+INPUT_FILE="stage03_pipeline/data/input_${SLURM_ARRAY_TASK_ID}.txt"
+OUTPUT_FILE="stage03_pipeline/results/result_${SLURM_ARRAY_TASK_ID}.txt"
 
 # Create results directory
-mkdir -p pipeline/results
+mkdir -p stage03_pipeline/results
 
 echo "================================"
 echo "STAGE 2: Process Data"

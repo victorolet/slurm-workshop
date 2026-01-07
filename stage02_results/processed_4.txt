@@ -1,0 +1,5 @@
+Statistics for 540.0 values
+Sum: 55342.0
+Average: 553.42
+Min: 6.0
+Max: 981.0

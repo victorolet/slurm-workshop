@@ -1,0 +1,38 @@
+==================================================
+FINAL ANALYSIS REPORT
+Generated: 2026-01-07 12:19:22
+==================================================
+
+
+--- Dataset 1 ---
+Analysis Results for Dataset 1
+========================================
+Sample size: 50
+Mean: 50.8568
+Std Dev: 28.7643
+Min: 1.0300
+Max: 99.6300
+
+--- Dataset 2 ---
+Analysis Results for Dataset 2
+========================================
+Sample size: 50
+Mean: 56.9978
+Std Dev: 25.7624
+Min: 0.3300
+Max: 99.2500
+
+--- Dataset 3 ---
+Analysis Results for Dataset 3
+========================================
+Sample size: 50
+Mean: 51.6332
+Std Dev: 29.1466
+Min: 1.3600
+Max: 98.6400
+
+==================================================
+OVERALL SUMMARY
+==================================================
+Total datasets processed: 3
+Average of all means: 53.1626

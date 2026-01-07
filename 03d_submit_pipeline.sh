@@ -10,7 +10,7 @@ echo "Submitting 3-Stage Pipeline"
 echo "================================"
 
 # Create output directory
-mkdir -p pipeline
+mkdir -p stage03_pipeline
 
 # Stage 1: Generate data
 echo "Submitting Stage 1 (Generate data)..."
@@ -38,5 +38,5 @@ echo "Monitor progress with:"
 echo "  squeue -u \$USER"
 echo ""
 echo "Check results when complete:"
-echo "  cat pipeline/final_report.txt"
+echo "  cat stage03_pipeline/final_report.txt"
 echo "================================"

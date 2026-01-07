@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=param_sweep
-#SBATCH --account=<your_project_account>
+#SBATCH --account=courses01
 #SBATCH --partition=work
-#SBATCH --output=results/param_%A_%a.out
-#SBATCH --error=results/param_%A_%a.err
+#SBATCH --output=stage01_results/param_%A_%a.out
+#SBATCH --error=stage01_results/param_%A_%a.err
 #SBATCH --array=1-5
 #SBATCH --time=00:10:00
 #SBATCH --ntasks=1
@@ -13,7 +13,7 @@
 module load python/3.11.6
 
 # Create output directory if it doesn't exist
-mkdir -p results
+mkdir -p stage01_results
 
 # Define parameter values for each array task
 # Each task will test a different parameter value

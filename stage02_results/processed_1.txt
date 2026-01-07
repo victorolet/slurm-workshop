@@ -1,0 +1,5 @@
+Statistics for 431.0 values
+Sum: 49409.0
+Average: 494.09
+Min: 30.0
+Max: 985.0

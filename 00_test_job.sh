@@ -1,11 +1,13 @@
 #!/bin/bash
 #SBATCH --job-name=my_first_job
-#SBATCH --account=<your_project_account>
-#SBATCH --output=output_%j.txt
-#SBATCH --error=error_%j.txt
+#SBATCH --account=courses01
+#SBATCH --output=stage00_test/output_%j.txt
+#SBATCH --error=stage00_test/error_%j.txt
 #SBATCH --ntasks=1
 #SBATCH --time=00:10:00
 #SBATCH --partition=work
+
+mkdir -p stage00_test
 
 echo "Hello from SLURM!"
 echo "Job ID: $SLURM_JOB_ID"

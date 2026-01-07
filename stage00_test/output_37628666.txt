@@ -1,0 +1,3 @@
+Hello from SLURM!
+Job ID: 37628666
+Running on: nid002792

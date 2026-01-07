@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=stage3_combine
-#SBATCH --account=<your_project_account>
+#SBATCH --job-name=stage03c_combine
+#SBATCH --account=courses01
 #SBATCH --partition=work
-#SBATCH --output=pipeline/stage3_%j.out
-#SBATCH --error=pipeline/stage3_%j.err
+#SBATCH --output=stage03_pipeline/stage3_%j.out
+#SBATCH --error=stage03_pipeline/stage3_%j.err
 #SBATCH --time=00:05:00
 #SBATCH --ntasks=1
 #SBATCH --mem=1G
@@ -14,7 +14,7 @@ module load python/3.11.6
 # This job should only run AFTER all stage 2 array tasks complete
 # Submit with: sbatch --dependency=afterok:JOBID_STAGE2 03c_stage3_combine.sh
 
-FINAL_REPORT="pipeline/final_report.txt"
+FINAL_REPORT="stage03_pipeline/final_report.txt"
 
 echo "================================"
 echo "STAGE 3: Combine Results"
@@ -25,7 +25,7 @@ echo "================================"
 # Check that all result files exist
 MISSING=0
 for i in {1..3}; do
-    if [ ! -f "pipeline/results/result_${i}.txt" ]; then
+    if [ ! -f "stage03_pipeline/results/result_${i}.txt" ]; then
         echo "ERROR: Missing result_${i}.txt"
         MISSING=1
     fi
@@ -52,7 +52,7 @@ with open('$FINAL_REPORT', 'w') as final:
     all_means = []
     
     for i in range(1, 4):
-        result_file = f'pipeline/results/result_{i}.txt'
+        result_file = f'stage03_pipeline/results/result_{i}.txt'
         
         final.write(f"\\n--- Dataset {i} ---\\n")
         

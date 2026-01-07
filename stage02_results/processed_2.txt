@@ -1,0 +1,5 @@
+Statistics for 532.0 values
+Sum: 51649.0
+Average: 516.49
+Min: 6.0
+Max: 995.0

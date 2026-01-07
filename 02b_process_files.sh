@@ -1,20 +1,20 @@
 #!/bin/bash
 #SBATCH --job-name=process_files
-#SBATCH --account=<your_project_account>
+#SBATCH --account=courses01
 #SBATCH --partition=work
-#SBATCH --output=results/file_%A_%a.out
-#SBATCH --error=results/file_%A_%a.err
+#SBATCH --output=stage02_results/file_%A_%a.out
+#SBATCH --error=stage02_results/file_%A_%a.err
 #SBATCH --array=1-5
 #SBATCH --time=00:10:00
 #SBATCH --ntasks=1
 #SBATCH --mem=1G
 
 # Create output directory if it doesn't exist
-mkdir -p results
+mkdir -p stage02_results
 
 # Define input and output file names based on array task ID
-INPUT_FILE="input_files/data_${SLURM_ARRAY_TASK_ID}.txt"
-OUTPUT_FILE="results/processed_${SLURM_ARRAY_TASK_ID}.txt"
+INPUT_FILE="stage02_input_files/data_${SLURM_ARRAY_TASK_ID}.txt"
+OUTPUT_FILE="stage02_results/processed_${SLURM_ARRAY_TASK_ID}.txt"
 
 echo "================================"
 echo "Processing input files"
